@@ -1,0 +1,19 @@
+.ratepage{
+    padding-top: 9rem;
+
+}
+.input_title{
+    font-size: 1.4rem;
+}
+.ratingsection{
+    display: flex;
+    width: 300px;
+}
+.label{
+
+    padding-top: 1rem;
+    display: flex;
+    width: 300px; 
+    font-size: 1.2rem;
+    justify-content: space-around;
+}

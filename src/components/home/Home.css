@@ -1,0 +1,46 @@
+
+.home{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    justify-content: center;
+    padding-top: 10rem;
+    background:url(./bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;  
+    height: 81rem;
+}
+.home form{
+    display: flex;
+}
+
+.home .image img{
+    width: 100%;
+}
+
+.home .content h3{
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color:var(--black);
+    line-height: 1;
+}
+
+
+.home form .box{
+    margin:.7rem 0;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color:var(--black);
+    border-radius: .5rem;
+    border:var(--border);
+    background: #f7f7f7;
+    text-transform: none;
+    width: 80%;
+}
+
+.home form .box:focus{
+    box-shadow: var(--box-shadow);
+}
