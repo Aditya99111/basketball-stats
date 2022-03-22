@@ -3,7 +3,7 @@ import React from 'react'
 const Terms = () => {
     return (
         <div className="privacypage">
-        <h1 className="heading">terms of <span>use</span></h1>
+        <h1 className="heading">terms of use</h1>
             <p>
 
             

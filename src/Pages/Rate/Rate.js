@@ -1,12 +1,29 @@
-import React, { useState  } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./Rate.css"
 const Rate = () => {
+
+    var date = new Date();
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+    if (month < 10) month = "0" + month;
+    if (day < 10) day = "0" + day;
+
+    var today = year + "-" + month + "-" + day;
+    useEffect(() => {
+
+        document.getElementById("date").click()
+
+    }, [])
+
+
 
     const [formData, setFormData] = useState({
         email: "",
         name: "",
         subject: "",
         message: "",
+
     });
 
     const handleChange = (e) => {
@@ -24,7 +41,6 @@ const Rate = () => {
 
                     <form onSubmit={(e) => {
                         e.preventDefault();
-                        alert("Success! Your review has been submitted.");
                         fetch("https://sheetdb.io/api/v1/370q0msdfd9bl", {
                             method: "post",
                             headers: {
@@ -35,7 +51,18 @@ const Rate = () => {
                         })
                             .then((res) => res.json())
                             .then((res) => console.log(res));
-                    }}
+                        if (window.confirm('Success! Your review has been submitted.')) {
+                            window.location.reload();
+
+                        }
+                        else {
+                            alert("Success! Your review has been submitted.")
+                        }
+
+
+                    }
+
+                    }
                         method="POST"
                         id="form">
                         <p className="input_title"> college name</p>
@@ -51,7 +78,7 @@ const Rate = () => {
                         <input type="text" name="College_Major" placeholder="e.g. Computer science" className="box" onChange={handleChange}
                             required />
 
-                        <p className="input_title"> Your Rating</p>
+                        <p className="input_title">Your Rating</p>
                         <div className="label">
                             <p>1</p>
                             <p>2</p>
@@ -74,6 +101,9 @@ const Rate = () => {
                         <p className="input_title"> college review</p>
                         <textarea name="College_Review" placeholder="Write your review here..." className="box" id="" cols="30" rows="10" onChange={handleChange}
                             required></textarea>
+
+                        <input type="date" value={today} id="date" type="hidden" name="Date_posted" onClick={handleChange} required />
+
                         <input type="submit" value="Submit" className="btn" />
                     </form>
 

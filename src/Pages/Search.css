@@ -68,6 +68,7 @@
 .college_description{
     padding-top: 10rem;
     float: left;
+    text-align: start;
     position: absolute;
 }
 
@@ -281,6 +282,12 @@
     display: flex;
 } */
 
+.posteddate{
+    float: right;
+    font-size: 1.5rem;
+    padding: 2rem;
+
+}
 .right{
     float: right;
     padding-right: 1%;

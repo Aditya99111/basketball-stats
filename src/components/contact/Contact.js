@@ -63,7 +63,7 @@ const Contact = () => {
                 }}
                     method="POST"
                     id="form">
-                    <h1 class="heading" style={{ fontSize: '3rem' }}>Feel free to send us a message below.</h1>
+                    <h1 class="heading lowercase" style={{ fontSize: '3rem' }}>Feel free to send us a message below.</h1>
                     <input name="name" type="text" placeholder="Name" className="box" onChange={handleChange}
                         required />
                     <input name="email" type="email" placeholder="Email" className="box" onChange={handleChange}

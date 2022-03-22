@@ -29,9 +29,9 @@ const Search = () => {
   }, []);
 
 
-
-
-  if (searchTerm === undefined) return <p>Loading...</p>;
+  if (searchTerm === undefined) return (
+  <h1>Loading...</h1>
+  );
 
   return (
     <section className="searchpage">
@@ -56,22 +56,23 @@ const Search = () => {
           </h1>
 
           <div class="box-container">
+
             {data
               .filter((val) => {
-                if (searchTerm === "") {
-                  return val;
-                } else if (
-                  val.Name_of_College
-                    .toLowerCase()
-                    .includes(searchTerm.toLowerCase())
-                ) {
-                  return val;
-                }
+                if (searchTerm === "") { return val; }
+
+                else if (val.Name_of_College
+                  .toLowerCase()
+                  .includes(searchTerm.toLowerCase())
+                ) { return val; }
+
               })
-              .map((val, key) => {
+              .reverse().map((val, key) => {
                 return (
 
                   <div class="box" key={key}>
+                      <p className="posteddate">{val.Date_posted}</p>
+
                     <div className="stars">
                       {Array.from('x'.repeat(val.College_Rating)).map((_, idx) => {
                         return <i key={idx} class="fas fa-star" />
@@ -80,13 +81,10 @@ const Search = () => {
                       {Array.from('x'.repeat(val.Less_Stars)).map((_, idx) => {
                         return <i key={idx} class="far fa-star" />
                       })}
-
-
                     </div>
-
-
                     <div class="content">
-
+                      <br />
+                      <br />
                       <h3 className="left">{val.College_Major}</h3>
                       <h3 className="right">{val.Name_of_College}</h3>
                       <p className="date">{val.Start_Date} - {val.Graduation_Date}</p>

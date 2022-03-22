@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Header.css"
+import Logo from "./logo.png"
 import {Link} from "react-router-dom"
 import { HashLink } from 'react-router-hash-link';
 
@@ -8,7 +9,7 @@ const Header = () => {
 
         <header className="header">
 
-            <Link to="/" className="logo"> <i class="fas fa-graduation-cap"></i> My college reviews</Link>
+            <Link to="/" className="logo"> <img src={Logo} height="30" width="30"/> My college reviews</Link>
 
             <nav className="navbar">
                 <HashLink to="/#home">home</HashLink>
