@@ -59,14 +59,14 @@
 }
 
 .date{
-    padding-top: 5rem;
+    padding-top: 3.5rem;
     float: left;
     position: absolute;
     border-bottom: 1px solid;
 
 }
 .college_description{
-    padding-top: 10rem;
+    padding-top: 14rem;
     float: left;
     text-align: start;
     position: absolute;
@@ -81,7 +81,7 @@
     margin-bottom: 2rem;
 
     position: relative;    
-    height: 350px;
+    height: 430px;
 }
 
 .products .box-container .box .discount{
@@ -142,17 +142,17 @@
 }
 
 .products .box-container .box .content{
-    padding: 1rem 2rem;
+    padding: 0rem 2rem;
     text-align: center;
 }
 
 .products .box-container .box .content h3{
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     color:#333;
     float :left ;
 }
 .products .box-container .box .content h3.right{
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     color:#333;
     float :right ;
     max-width:200px;
@@ -161,10 +161,11 @@
 .products .box-container .box .content p{
     font-size: 1.5rem;
     color:#333;
-    max-height: 250px;
+    max-height: 270px;
     overflow: hidden;
     text-transform: none;
     padding-right: 2rem;
+    text-align: start;
 }
 
 .products .box-container .box .content .price{
@@ -284,13 +285,15 @@
 
 .posteddate{
     float: right;
-    font-size: 1.5rem;
+    font-size: 3rem;
     padding: 2rem;
+    font-weight: 700;
 
 }
 .right{
     float: right;
     padding-right: 1%;
+    
 }
 .popupicons{
     display: flex;
@@ -564,10 +567,11 @@
 
 
 .stars{
-    font-size: 2.5rem;
-    color: gold;
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
     padding: 2rem !important;
     border-bottom: 1px solid black;
+    font-weight: 700;
 }
 .stars i{
     padding: .3rem;

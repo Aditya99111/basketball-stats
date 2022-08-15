@@ -50,7 +50,7 @@ const Contact = () => {
                 <form onSubmit={(e) => {
                     e.preventDefault();
                     alert("Success! Your message has been submitted.");
-                    fetch("https://sheetdb.io/api/v1/gjj1jy21shoh4", {
+                    fetch("https://sheetdb.io/api/v1/gug8odhc1al1a", {
                         method: "post",
                         headers: {
                             Accept: "application/json, text/plain, */*",

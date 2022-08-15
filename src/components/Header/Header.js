@@ -9,7 +9,7 @@ const Header = () => {
 
         <header className="header">
 
-            <Link to="/" className="logo"> <img src={Logo} height="30" width="30"/> My college reviews</Link>
+            <Link to="/" className="logo"> <img src={Logo} height="30" width="30"/>Basket ball results</Link>
 
             <nav className="navbar">
                 <HashLink to="/#home">home</HashLink>

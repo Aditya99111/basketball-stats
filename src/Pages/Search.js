@@ -9,7 +9,7 @@ const Search = () => {
   const [data, setData] = useState([])
 
   const apiGet = () => {
-    fetch("https://sheetdb.io/api/v1/370q0msdfd9bl")
+    fetch("https://sheetdb.io/api/v1/6l767ihbrp156")
       .then((response) => response.json())
       .then((json) => {
         console.log(json);
@@ -61,7 +61,7 @@ const Search = () => {
               .filter((val) => {
                 if (searchTerm === "") { return val; }
 
-                else if (val.Name_of_College
+                else if (val.Name_of_Team
                   .toLowerCase()
                   .includes(searchTerm.toLowerCase())
                 ) { return val; }
@@ -71,24 +71,22 @@ const Search = () => {
                 return (
 
                   <div class="box" key={key}>
-                      <p className="posteddate">{val.Date_posted}</p>
+                      <p className="posteddate">{val.results}</p>
 
-                    <div className="stars">
-                      {Array.from('x'.repeat(val.College_Rating)).map((_, idx) => {
-                        return <i key={idx} class="fas fa-star" />
-                      })}
-
-                      {Array.from('x'.repeat(val.Less_Stars)).map((_, idx) => {
-                        return <i key={idx} class="far fa-star" />
-                      })}
-                    </div>
+                    <div className="stars">{val.Name_of_Team}</div>
                     <div class="content">
                       <br />
                       <br />
-                      <h3 className="left">{val.College_Major}</h3>
-                      <h3 className="right">{val.Name_of_College}</h3>
-                      <p className="date">{val.Start_Date} - {val.Graduation_Date}</p>
-                      <p className="college_description">{val.College_Review}</p>
+                      <h3 className="left">Final score: {val.Final_score}</h3>
+                      <h3 className="right">MVP: {!!(val.MVP)?val.MVP:"N/A"}</h3>
+                      <p className="date">
+                      <div>First quarter score: {!!(val.First_quarter_score)?val.First_quarter_score:"N/A"} </div> 
+                      <div>Second quarter score: {!!(val.Second_quarter_score)?val.Second_quarter_score:"N/A"}</div>
+                      <div>Third quarter score: {!!(val.Third_quarter_score)?val.Third_quarter_score:"N/A"}</div>
+                      <div>Fourth quarter score: {!!(val.Fourth_quarter_score)?val.Fourth_quarter_score:"N/A"}</div>
+                      
+                      </p>
+                      <p className="college_description"> <b>Highlights:</b> {val.Highlights}</p>
 
                     </div>
                   </div>
